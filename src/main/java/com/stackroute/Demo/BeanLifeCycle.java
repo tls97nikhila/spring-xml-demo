@@ -16,6 +16,8 @@ public class BeanLifeCycle implements InitializingBean, DisposableBean {
         }
         public void customInit(){
             System.out.println("Initialization");
+            System.out.println();
+
         }
         public void customDestroy(){
             System.out.println("Destroy");

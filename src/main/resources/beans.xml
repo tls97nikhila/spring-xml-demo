@@ -20,4 +20,6 @@
     <bean id="BeanLifeCycle" class="com.stackroute.Demo.BeanLifeCycle"
           init-method="customInit" destroy-method="customDestroy" ></bean>
 
+    <bean id="BeanLifeCycleDemoBean" class="com.stackroute.Demo.BeanPostProcessorDemoBean"></bean>
+
 </beans>
