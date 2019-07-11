@@ -5,7 +5,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 
-import java.security.cert.X509Certificate;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,12 +12,27 @@ public class Main {
         //using XmlBeanFactory
         XmlBeanFactory factory= new XmlBeanFactory(new ClassPathResource("beans.xml"));
         Movie one= (Movie)factory.getBean("one");
+        Movie dubOne= (Movie)factory.getBean("one");
 
-        System.out.println(one.getActor());
         //using Application Context
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
         Movie two = context.getBean("two",Movie.class);
+        Movie remakeTwo= context.getBean("two",Movie.class);
+
+        Movie three = context.getBean("three",Movie.class);
+        // actor 1 data
+        System.out.println(one.getActor());
+
+        // actor 2 data
 
         System.out.println(two.getActor());
+        // actor 3 data
+        System.out.println(three.getActor());
+
+        System.out.println("For Singleton Scope" );
+        System.out.println(one==dubOne);
+        System.out.println("For Prototype Scope" );
+        System.out.println(two==remakeTwo);
+
     }
 }
