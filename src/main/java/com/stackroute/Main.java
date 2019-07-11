@@ -34,5 +34,8 @@ public class Main {
         System.out.println("For Prototype Scope" );
         System.out.println(two==remakeTwo);
 
+
+
+
     }
 }

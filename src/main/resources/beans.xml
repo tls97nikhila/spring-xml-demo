@@ -31,12 +31,9 @@
 
 </bean>
 
-    <bean id="two" class="com.stackroute.Domain.Movie" scope="prototype">
+    <bean name="two,three" class="com.stackroute.Domain.Movie" scope="prototype">
         <constructor-arg name="actor" ref="actor2"/>
 
     </bean>
-    <bean id="three" class="com.stackroute.Domain.Movie" scope="prototype">
-        <constructor-arg name="actor" ref="actor3"/>
 
-    </bean>
 </beans>
