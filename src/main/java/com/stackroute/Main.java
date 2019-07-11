@@ -13,9 +13,6 @@ public class Main {
         Movie one = context.getBean("one",Movie.class);
         System.out.println(one.getActor());
 
-        Movie two = context.getBean("two",Movie.class);
-        System.out.println(two.getActor());
-
 
 
     }
