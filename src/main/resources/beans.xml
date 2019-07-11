@@ -11,17 +11,17 @@
         <constructor-arg name="age" value="32" />
 
     </bean>
-<!--
-    <bean id="actor1" class="com.stackroute.Domain.Actor">
+
+   <!-- <bean id="actor1" class="com.stackroute.Domain.Actor">
         <constructor-arg name="name" value="Sridevi" />
         <constructor-arg name="gender" value="Female" />
         <constructor-arg name="age" value="43" />
 
-    </bean> -->
-
+    </bean>
+-->
     <bean id="one"  autowire="byName" class="com.stackroute.Domain.Movie" ></bean>
 
-    <bean name="two" autowire="byType" class="com.stackroute.Domain.Movie">
+    <bean name="two" class="com.stackroute.Domain.Movie" autowire="byType">
     </bean>
 
 
