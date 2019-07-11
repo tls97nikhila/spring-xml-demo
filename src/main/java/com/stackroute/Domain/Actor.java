@@ -9,7 +9,7 @@ public class Actor {
         this.gender = gender;
         this.age = age;
     }
-
+//constructor in Actor cons arg
     @Override
     public String toString() {
         return "Actor{" +

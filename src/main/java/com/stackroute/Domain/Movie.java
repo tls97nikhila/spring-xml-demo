@@ -4,8 +4,8 @@ public class Movie {
     public Actor getActor() {
         return actor;
     }
-
-    public Movie(Actor actor) {
+// set is used by autowire in Movie
+    public void setActor(Actor actor) {
         this.actor = actor;
     }
 
